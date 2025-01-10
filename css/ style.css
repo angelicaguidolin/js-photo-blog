@@ -62,6 +62,7 @@ h1{
 /*HEADER*/
 header {
    width: 100%;
+  
    
 }
 .title{
@@ -76,6 +77,7 @@ main{
     padding: 40px;
 
 }
+
 .photos{
     margin-bottom: 20px;
     width: 296px;
@@ -113,8 +115,4 @@ main{
     .photos .col{
         width: calc(100% / 2);
     }
-}
-/* XL >= 1200px */
-@media screen and (min-width: 1200px) {
-    
 }
