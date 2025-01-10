@@ -34,6 +34,7 @@
 .row {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .gap-10 > .col {
@@ -85,7 +86,10 @@ main{
     
 }
 .description{
-    padding-top: 10px;
+    position: relative;
+    left: 21px;
+    font-size: 16px;
+    margin-right: 17px;
 }
 .photos .col{
     width: calc(100% / 3);
@@ -105,6 +109,14 @@ main{
     width: 263px;
     background-color: #92C952;
 }
+/*OVERLAY*/
+.overlay{
+background-color: rgba(black, black, black, 0.15);
+position: relative;
+left: 0;
+top: 0;
+z-index: 10;
+}
 /*----------------
     RESPONSIVE
     Mobile First
@@ -115,7 +127,5 @@ main{
 }
 /* MD >= 768px */
 @media screen and (min-width: 768px) {
-    .photos .col{
-        width: calc(100% / 2);
-    }
+   
 }

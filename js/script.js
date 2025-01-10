@@ -5,27 +5,31 @@ const photoCardElem = document.getElementById("photo-card")
 axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
   .then((resp) => {
     const photos = resp.data; 
-    
-  })
-photos.forEach((photo)=>{
-  photoCardElem.innerHTML += `
-  <section id="photo-card" class=" container row gap-30 ">
-            <div class="col">
-                <div class="photos">
-                    <div  class="thumbtack">
-                        <img src="./assets_day1/img/pin.svg" alt="">
-                    </div>
-                    <div class="photos-img">
-                        <div class="img-place-holder">
-                            <img src="" alt="">
+    console.log(photos)
+    photos.forEach((photo)=>{
+      
+      photoCardElem.innerHTML += `
+      <section id="photo-card" class=" container row gap-30 ">
+                <div class="col">
+                    <div class="photos">
+                        <div  class="thumbtack">
+                            <img src="./assets_day1/img/pin.svg" alt="">
                         </div>
-                    </div>
-                     <div class="description">
-                            <h3>${photos.title}</h3>
+                        <div class="photos-img">
+                            <div class="img-place-holder>
+                                <img class="img-fluid"" src="${photo.url}" alt="">
+                            </div>
                         </div>
+                         <div class="description">
+                                <h3>${photo.title}</h3>
+                            </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-  
-  `
-})
+            </section>
+      
+      `
+    })
+    
+    const photoClick= document.querySelectorAll("#photo-card section")
+      console.log(photoClick)
+  })
