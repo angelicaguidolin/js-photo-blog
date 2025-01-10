@@ -77,12 +77,15 @@ main{
     padding: 40px;
 
 }
-
+/*CARD*/
 .photos{
     margin-bottom: 20px;
     width: 296px;
     height: 362px;
     
+}
+.description{
+    padding-top: 10px;
 }
 .photos .col{
     width: calc(100% / 3);
