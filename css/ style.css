@@ -109,13 +109,38 @@ main{
     width: 263px;
     background-color: #92C952;
 }
+
+
 /*OVERLAY*/
 .overlay{
-background-color: rgba(black, black, black, 0.15);
-position: relative;
+background-color: black;
+opacity: 0.5;
+position: fixed;
 left: 0;
 top: 0;
+right: 0;
+bottom: 0;
 z-index: 10;
+}
+.btn-large {
+    padding: 10px 20px;
+    font-size: 26px;
+}
+button{
+    position: absolute;
+    z-index: 11;
+    left: 46%;
+    top: 53px
+   
+}
+.place-holder-2{
+    height: 600px;
+    width: 600px;
+    background-color: #92C952;
+    position: absolute;
+    z-index: 12;
+    top: 278px;
+    right: 30%;
 }
 /*----------------
     RESPONSIVE

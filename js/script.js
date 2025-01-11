@@ -17,7 +17,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
                         </div>
                         <div class="photos-img">
                             <div class="img-place-holder>
-                                <img class="img-fluid"" src="${photo.url}" alt="">
+                                <img class="img-fluid"" src="" alt="">
                             </div>
                         </div>
                          <div class="description">
