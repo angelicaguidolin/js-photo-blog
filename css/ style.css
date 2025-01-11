@@ -142,6 +142,9 @@ button{
     top: 278px;
     right: 30%;
 }
+.overlay-hidden{
+    display: none;
+}
 /*----------------
     RESPONSIVE
     Mobile First
