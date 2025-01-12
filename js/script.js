@@ -18,7 +18,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
                         </div>
                         <div class="photos-img">
                             <div class="img-place-holder>
-                                <img class="img-fluid"" src="" alt="">
+                                <img class="img-fluid"" src="${photo.url}" alt="">
                             </div>
                         </div>
                          <div class="description">
@@ -32,10 +32,20 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
     })
     
     const photoClick= document.querySelectorAll("#photo-card section")
-      console.log(photoClick)
+      photoClick.forEach((photosOverlay) => {
+        photosOverlay.addEventListener("click", () =>{
+            overlayHiddenElem.style.display= "block"
+            photoClick.innerHTML += `
+                 <div class="overlay"></div>
+        <div class="place-holder-2">
+            <img src="${photosOverlay.url} alt="">
+        </div>
+            `
+        })
+      })
       
   })
-overlayHiddenElem.style.display= "block"
+
 //EVENTS//
 if (buttonCloseElem) {
     buttonCloseElem.addEventListener("click", function () {
