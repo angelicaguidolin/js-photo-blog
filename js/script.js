@@ -1,7 +1,7 @@
 //DOM ELEMENTS//
 const photoCardElem = document.getElementById("photo-card")
 const overlayHiddenElem = document.getElementById("overlay-hidden")
-const buttonCloseElem = document.querySelector("btn-large")
+const buttonCloseElem = document.querySelector(".btn-large")
 //FUNCTION//
 axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
   .then((resp) => {
@@ -37,9 +37,9 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
   })
 overlayHiddenElem.style.display= "block"
 //EVENTS//
-buttonCloseElem.addEventListener("click", function() {
-    if(overlayHiddenElem.classList.contains("overlay-hidden")) {
-        overlayHiddenElem.classList.add("overlay-hidden");
-        buttonCloseElem.innerHTML = "Nascondi";
-    }
-});
+if (buttonCloseElem) {
+    buttonCloseElem.addEventListener("click", function () {
+      overlayHiddenElem.classList.add("overlay-hidden"); // Aggiunge la classe
+      overlayHiddenElem.style.display = "none"; // Nasconde l'overlay
+    });
+  } 
